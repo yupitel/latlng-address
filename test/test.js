@@ -12,7 +12,7 @@ describe('Library test', () => {
         encode_polylines: false,
         secure: true
       };
-      console.log(config);
+
       const lla = new LatLngAdr(config);
       lla.getAddress(40.782906, -73.965433)
       .then((address) => {
