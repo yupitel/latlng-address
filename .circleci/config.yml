@@ -38,6 +38,10 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - add-ssh-keys:
+        fingerprints:
+          - "89:cc:8b:aa:17:24:65:08:de:aa:0a:e6:4b:61:43:50"
+
       - checkout
 
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
