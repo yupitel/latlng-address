@@ -1,4 +1,4 @@
-laglng-address
+latlng-address
 ====
 
 this library is wrapper to call reverse geocoding function in the Google Maps API from node.js
