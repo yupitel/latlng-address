@@ -39,8 +39,8 @@ jobs:
 
     steps:
       - add-ssh-keys:
-        fingerprints:
-          - "89:cc:8b:aa:17:24:65:08:de:aa:0a:e6:4b:61:43:50"
+          fingerprints:
+            - "89:cc:8b:aa:17:24:65:08:de:aa:0a:e6:4b:61:43:50"
 
       - checkout
 
