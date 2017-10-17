@@ -1,0 +1,6 @@
+{
+    "key": "YOUR KEY",
+    "stagger_time": 1000,
+    "encode_polylines": false,
+    "secure": true
+}

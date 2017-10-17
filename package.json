@@ -1,0 +1,32 @@
+{
+  "name": "latlng-address",
+  "version": "0.0.1",
+  "description": "get address info with latitude / longitude by google map api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yupitel@github.com/yupitel/latlng-address.git"
+  },
+  "readmeFilename": "README.md",
+  "keywords": [
+    "goolglemap",
+    "latitude",
+    "longitude",
+    "address"
+  ],
+  "author": "Shunsuke <qfoori@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yupitel/latlng-address/issues"
+  },
+  "homepage": "https://github.com/yupitel/latlng-address#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "googlemaps": "^1.12.0"
+  }
+}
