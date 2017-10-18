@@ -54,7 +54,7 @@ jobs:
 
       - run: npm version patch
 
-      - run: npm tag
+      - run: git tag
 
       - run: git push origin master && git push --tags
 
