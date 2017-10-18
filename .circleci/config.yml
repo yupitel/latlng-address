@@ -56,7 +56,9 @@ jobs:
 
       - run: npm version patch
 
-      - run: git push origin production && git push --tags
+      - run: npm tag
+
+      - run: git push origin master && git push --tags
 
       - run: npm publish
 
