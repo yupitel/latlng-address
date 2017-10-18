@@ -1,6 +1,6 @@
 {
   "name": "latlng-address",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "get address info with latitude / longitude by google map api",
   "main": "index.js",
   "scripts": {
