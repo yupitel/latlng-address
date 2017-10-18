@@ -52,13 +52,11 @@ jobs:
 
       - run: git config --global push.default matching
 
-      - run: git show-branch
-
       - run: npm version patch
 
-      - run: git push
+      - run: npm tag
 
-      - run: git push --tags
+      - run: git push origin master && git push --tags
 
       - run: npm publish
 
