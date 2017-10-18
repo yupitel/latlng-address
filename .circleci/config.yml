@@ -52,8 +52,6 @@ jobs:
 
       - run: git config --global push.default matching
 
-      - run: git show-branch
-
       - run: npm version patch
 
       - run: npm tag
