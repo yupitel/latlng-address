@@ -58,6 +58,8 @@ jobs:
 
       - run: echo $COMD
 
+      - run: echo $COMD
+
       - run: git status --porcelain
 
       - run: git add ~/repo/package.json
