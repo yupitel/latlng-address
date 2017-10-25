@@ -58,6 +58,10 @@ jobs:
 
       - run: echo $UPDATED_VERSION
 
+      - run: echo $BASH_ENV
+
+      - run: echo 'check var'
+
       - run: git status --porcelain
 
       - run: git add ~/repo/package.json
