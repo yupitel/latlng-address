@@ -55,16 +55,16 @@ jobs:
       - run: sudo npm install -g upvn
 
       - run:
-        name: update version info
-        command: |
-          COMD=`upvn patch` || echo $COMD || echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
-          source /home/circleci/.bashrc
+          name: update version info
+          command: |
+            COMD=`upvn patch` || echo $COMD || echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
+            source /home/circleci/.bashrc
 
       - run: 
-        name: check version
-        command: |
-          echo $UPDATED_VERSION
-          source /home/circleci/.bashrc
+          name: check version
+          command: |
+            echo $UPDATED_VERSION
+            source /home/circleci/.bashrc
 
       - run: echo 'check var'
 
@@ -73,16 +73,16 @@ jobs:
       - run: git add ~/repo/package.json
 
       - run:
-        name: commit
-        command: |
-          git commit -m $UPDATED_VERSION
-          source /home/circleci/.bashrc
+          name: commit
+          command: |
+            git commit -m $UPDATED_VERSION
+            source /home/circleci/.bashrc
 
       - run:
-        name: create tag
-        command: |
-          git tag v$UPDATED_VERSION -am $UPDATED_VERSION
-          source /home/circleci/.bashrc
+          name: create tag
+          command: |
+            git tag v$UPDATED_VERSION -am $UPDATED_VERSION
+            source /home/circleci/.bashrc
 
       - run: git push --tags
 
