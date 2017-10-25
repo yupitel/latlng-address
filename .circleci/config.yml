@@ -66,7 +66,7 @@ jobs:
       - run:
           name: update version info
           command: |
-            COMD=`upvn patch` || echo $COMD || echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
+            COMD=`upvn patch` && echo $COMD && echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
             source /home/circleci/.bashrc
 
       - run: 
