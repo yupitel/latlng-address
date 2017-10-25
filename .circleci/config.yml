@@ -62,7 +62,7 @@ jobs:
 
       - run: git add ~/repo/package.json
 
-      - run: git commid -m $COMD
+      - run: git commit -m $COMD
 
       - run: git tag v$COMD -am $COMD
 
