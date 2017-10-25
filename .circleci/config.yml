@@ -52,11 +52,21 @@ jobs:
 
       - run: git config --global push.default matching
 
-      - run: npm version patch
+      - run: npm install -g upvn
 
-      - run: git tag
+      - run: COMD=`upvn patch`
 
-      - run: git push origin production:master && git push --tags
+      - run: echo $COMD
+
+      - run: git status --porcelain
+
+      - run: git add ~/repo/package.json
+
+      - run: git commid -m $COMD
+
+      - run: git tag v$COMD -am $COMD
+
+      - run: git push --tags
 
       - run: npm publish
 
