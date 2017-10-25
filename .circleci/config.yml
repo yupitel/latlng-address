@@ -54,19 +54,17 @@ jobs:
 
       - run: sudo npm install -g upvn
 
-      - run: COMD=`upvn patch`
+      - run: echo "upvn patch" >> $UPDATED_VERSION
 
-      - run: echo $COMD
-
-      - run: echo $COMD
+      - run: echo $UPDATE_VERSION
 
       - run: git status --porcelain
 
       - run: git add ~/repo/package.json
 
-      - run: git commit -m $COMD
+      - run: git commit -m $UPDATE_VERSION
 
-      - run: git tag v$COMD -am $COMD
+      - run: git tag v$UPDATE_VERSION -am $UPDATE_VERSION
 
       - run: git push --tags
 
