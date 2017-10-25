@@ -54,15 +54,6 @@ jobs:
 
       - run: sudo npm install -g upvn
 
-
-      - run:
-          name: update version info
-          command: |
-            echo "export LOC_ENV_TEST=testdata" >> $BASH_ENV
-            source /home/circleci/.bashrc
-
-      - run: echo $LOC_ENV_TEST
-
       - run:
           name: update version info
           command: |
