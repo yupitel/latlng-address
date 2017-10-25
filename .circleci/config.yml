@@ -58,15 +58,11 @@ jobs:
           name: update version info
           command: |
             COMD=`upvn patch` && echo $COMD && echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
-            source /home/circleci/.bashrc
 
       - run: 
           name: check version
           command: |
             echo $UPDATED_VERSION
-            source /home/circleci/.bashrc
-
-      - run: echo 'check var'
 
       - run: git status --porcelain
 
@@ -76,13 +72,11 @@ jobs:
           name: commit
           command: |
             git commit -m $UPDATED_VERSION
-            source /home/circleci/.bashrc
 
       - run:
           name: create tag
           command: |
             git tag v$UPDATED_VERSION -am $UPDATED_VERSION
-            source /home/circleci/.bashrc
 
       - run: git push --tags
 
