@@ -54,7 +54,7 @@ jobs:
 
       - run: sudo npm install -g upvn
 
-      - run: COMD=`upvn patch` || echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
+      - run: COMD=`upvn patch` || echo $COMD || echo "export UPDATED_VERSION=$COMD" >> $BASH_ENV
 
       - run: echo $UPDATED_VERSION
 
