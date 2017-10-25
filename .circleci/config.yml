@@ -52,7 +52,7 @@ jobs:
 
       - run: git config --global push.default matching
 
-      - run: npm install -g upvn
+      - run: sudo npm install upvn
 
       - run: COMD=`upvn patch`
 
