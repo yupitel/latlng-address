@@ -26,6 +26,7 @@ optional parameter is set in the option argument.
 About the key data, please register map api servie.  
 https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse?hl=ja
 
+
 ```
 const LatLngAdr = require('latlng-address');
 
